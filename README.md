@@ -39,10 +39,6 @@ kernel base, the pmap anchors, the direct map base, progress every 1 MiB, how ma
 chunks were refused, a checksum of the kernel dump, and where the SVM instructions
 (vmrun, vmmcall, vmload, vmsave, skinit) turned up in the hypervisor window.
 
-Both files are raw binary. No header, no padding at the end. Pages the kernel
-refuses to read are written as 0xCC filler so every offset after them still lines
-up, and the log says how many there were.
-
 Not in there: physical RAM in general, other processes, game data, savedata, flash
 or NAND, the A53, or anything outside those two windows.
 
